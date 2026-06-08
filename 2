@@ -1,0 +1,25 @@
+function findMaxDigitBlock(str) {
+    const blocks = str.split('0');
+    
+    let maxBlock = '';
+    let maxSum = 0;
+
+    for (const block of blocks) {
+        if (block === '') continue;
+        const currentSum = block
+            .split('')
+            .reduce((sum, digit) => sum + parseInt(digit, 10), 0);
+
+        if (currentSum > maxSum) {
+            maxSum = currentSum;
+            maxBlock = block;
+        }
+    }
+
+    return { block: maxBlock, sum: maxSum };
+}
+
+const inputStr = "721024501111111090";
+const result = findMaxDigitBlock(inputStr);
+
+console.log(`${result.block}, ${result.sum}`);
