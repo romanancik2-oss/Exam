@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации</title>
+    <style>
+        /* Общие стили для страницы */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        /* Контейнер для центрирования и ограничения ширины */
+        .form-container {
+            width: 100%;
+            max-width: 450px;
+        }
+
+        /* Группа полей (отступы между блоками) */
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        /* Стили заголовков полей */
+        label {
+            display: block;
+            font-weight: bold;
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        /* Стили для серого текста с примерами */
+        .hint {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        /* Стили полей ввода */
+        input[type="text"],
+        input[type="email"],
+        input[type="url"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px 10px;
+            border: 1px solid #cccccc;
+            border-radius: 2px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        /* Эффект при клике на поле ввода */
+        input:focus {
+            border-color: #4a8cff;
+        }
+
+        /* Ссылка "+ Добавить имя" */
+        .add-name-link {
+            display: inline-block;
+            color: #2b2bbd;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .add-name-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Тонкая разделительная линия */
+        .divider {
+            border: 0;
+            border-top: 1px solid #e0e0e0;
+            margin-bottom: 25px;
+        }
+
+        /* Кнопка "ДАЛЕЕ" */
+        .submit-btn {
+            background-color: #5890ff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 24px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .submit-btn:hover {
+            background-color: #437ce6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="form-group">
+            <label for="name">Имя</label>
+            <div class="hint">Полное имя, как оно указано в статьях</div>
+            <input type="text" id="name" name="name">
+        </div>
+
+        <a href="#" class="add-name-link">+ Добавить имя</a>
+
+        <hr class="divider">
+
+        <div class="form-group">
+            <label for="workplace">Место работы</label>
+            <div class="hint">Пример: профессор математики, МГУ им. Ломоносова</div>
+            <input type="text" id="workplace" name="workplace">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Электронная почта для подтверждения</label>
+            <div class="hint">Пример: kolmogorov@msu.ru</div>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="interests">Области интересов</label>
+            <div class="hint">Пример: топология, турбулентность, функциональный анализ</div>
+            <input type="text" id="interests" name="interests">
+        </div>
+
+        <div class="form-group">
+            <label for="website">Личная страница (необязательно)</label>
+            <div class="hint">Пример: http://www.msu.ru/~kolmogorov</div>
+            <input type="url" id="website" name="website">
+        </div>
+
+        <button type="submit" class="submit-btn">ДАЛЕЕ</button>
+    </div>
+
+</body>
+</html>
